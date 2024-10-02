@@ -26,11 +26,11 @@ def generate_launch_description():
                 'nms_iou_thresh': 0.01,
                 'pre_nms_top_n': 4096,
                 'class_names': ['Vehicle', 'Pedestrian', 'Cyclist'],
-                'model_path': '', 
-                'engine_path': '/home/nvidia/Projects/PointPillars/trt.fp16.engine',
-                'data_type': 'fp32',
+                'model_path': '/home/nvidia/workspace/pointpillars_ws/src/ros2_tao_pointpillars/weights/pointpillars_deployable.etlt', 
+                'engine_path': '/home/nvidia/workspace/pointpillars_ws/src/ros2_tao_pointpillars/weights/trt.fp16.engine',
+                'data_type': 'fp16',
                 'intensity_scale': 255.0,
             }],
-            remappings=[('/point_cloud', '/ns2/zvision_lidar_points')]
+            remappings=[('/point_cloud', '/lidar_points')]
         )
     ])
